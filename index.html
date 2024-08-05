@@ -1,13 +1,129 @@
 <!doctype html>
 <html lang="en">
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Резюме</title>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+
+  <a4>
+    <m>
+      <p1>
+        <n>Привет, меня зовут Игорь. Я - JS-разработчик</n>
+      </p1>
+
+      <p3>
+        <h>
+          <n2>Образование</n2>
+          <h>
+            <p4>
+              <n3>2022-2024</n3>
+              <n1>IT класс Лицея №1511 МИФИ</n1>
+            </p4>
+            <p4>
+              <n3>2024-2028</n3>
+              <n1>Факультет информатики и вычислительной техники МГТУ им. Баумана</n1>
+            </p4>
+          </h>
+        </h>
+      </p3>
+    </m>
+    <p2>
+      <h>
+      <n2>Языки программирования</n2>
+        <n1>Python</n1>
+        <n1>C++</n1>
+        <n1>JS</n1>
+      </h>  
+    </p2>
+    <img src = 'https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676295806139337963.png'></img>
+  </a4>
+  
+  <script src="main.js"></script>
+  <script src="index.js"></script>
 </html>
+
+<script>
+  var tds = document.querySelectorAll('n')
+
+  for( var i = 0; i < tds.length; i++){
+    tds[i].addEventListener('click', function func(){
+      
+      var input = document.createElement('input')
+      input.value = this.innerHTML
+      this.innerHTML = ''
+      this.appendChild(input)
+      
+      var td = this
+      input.addEventListener('blur', function(){
+        td.innerHTML = this.value
+        td.addEventListener('click', func)
+      })
+
+      this.removeEventListener('click', func)
+    })
+  }
+
+  var tds = document.querySelectorAll('n1')
+
+  for( var i = 0; i < tds.length; i++){
+    tds[i].addEventListener('click', function func(){
+      
+      var input = document.createElement('input')
+      input.value = this.innerHTML
+      this.innerHTML = ''
+      this.appendChild(input)
+      
+      var td = this
+      input.addEventListener('blur', function(){
+        td.innerHTML = this.value
+        td.addEventListener('click', func)
+      })
+
+      this.removeEventListener('click', func)
+    })
+  }
+
+var tds = document.querySelectorAll('n2')
+
+for( var i = 0; i < tds.length; i++){
+  tds[i].addEventListener('click', function func(){
+    
+    var input = document.createElement('input')
+    input.value = this.innerHTML
+    this.innerHTML = ''
+    this.appendChild(input)
+    
+    var td = this
+    input.addEventListener('blur', function(){
+      td.innerHTML = this.value
+      td.addEventListener('click', func)
+    })
+
+    this.removeEventListener('click', func)
+  })
+}
+
+
+var tds = document.querySelectorAll('n3')
+
+for( var i = 0; i < tds.length; i++){
+  tds[i].addEventListener('click', function func(){
+    
+    var input = document.createElement('input')
+    input.value = this.innerHTML
+    this.innerHTML = ''
+    this.appendChild(input)
+    
+    var td = this
+    input.addEventListener('blur', function(){
+      td.innerHTML = this.value
+      td.addEventListener('click', func)
+    })
+
+    this.removeEventListener('click', func)
+  })
+}
+</script>
